@@ -17,7 +17,6 @@ function anagrams(stringA, stringB) {
     }
     return map;
   }
-
   // assigning the result of the mapping function to a variable for each map.
   const mapA = characterMap(stringA);
   const mapB = characterMap(stringB);
@@ -35,5 +34,13 @@ function anagrams(stringA, stringB) {
   }
   return true;
 }
+
+// second solution using sort method. quicker, but uses more memory.
+// function anagrams(stringA, stringB) {
+//   const cleanString = (str) => {
+//     return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
+//   }
+//   return cleanString(stringA) === cleanString(stringB)
+// }
 
 module.exports = anagrams;
